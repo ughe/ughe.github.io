@@ -1,7 +1,10 @@
 # Theme
-remote_theme: jekyll/minima
+theme: minima
 
 # Metadata
-name: ughe
+title: ughe.github.io
 author: William Ughetta
+github_username:  ughe
 
+show_excerpts: false
+plugins:
