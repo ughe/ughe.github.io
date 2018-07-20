@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Building GDB from Source"
+categories: [gdb, vagrant]
 ---
 
 This post covers compiling the GDB source code on an x86 or amd64

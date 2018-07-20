@@ -6,5 +6,6 @@ title: ughe.github.io
 author: William Ughetta
 github_username:  ughe
 
+permalink: /:year/:month/:day/:title
 show_excerpts: false
 plugins:
