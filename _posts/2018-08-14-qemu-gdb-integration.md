@@ -31,6 +31,7 @@ define qemu
   if $argc != 1
       echo Usage: qemu a.out\n
   else
+    shell kill -9 $(ps -u | grep -m 1 'qemu-aarch64 -g 1234' | awk '{print $2}') 2>/dev/null
     file $arg0
     shell qemu-aarch64 -g 1234 $arg0 &>/dev/stdout </dev/stdin &
     target remote :1234
@@ -43,9 +44,9 @@ end
 The `qemu` command takes one argument only, which is the arm64 binary
 that it will run.
 
-First, the debug info is loaded with `file $arg0`. `arg0` is the first
-argument given to `qemu`. For example, it could be `a.out`. Next, GDB
-starts the remote Qemu user-space emulation with the
+First, the debug info is loaded with `file $arg0` after attempting to
+halt the previous debug session. `arg0` is the first argument given to
+`qemu`. Next, GDB starts the remote Qemu user-space emulation with the
 `shell qemu-aarch64 -g 1234 $arg0 &>/dev/stdout </dev/stdin &`
 command. The `-g 1234` specifies the default port 1234. This means
 that there can only be one debug at a time because it only attempts to
