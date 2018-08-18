@@ -56,3 +56,53 @@ restriction is this does not work with the GDB tui (i.e.
 `layout src`). It does work with Emacs and GDB in its normal mode.
 Finally, GDB is told to connect to Qemu with `target remote :1234`,
 and it goes straight to `main`.
+
+# Taking Command Line Parameters
+
+The `qemu` command can be extended to accept command line arguments
+along with passing the input and output. While theoretically it could
+be setup to take as many arguments as desired, the following command
+accepts up to 7 additional command line arguments:
+
+```
+define qemu
+  if $argc <= 0 || $argc > 8
+    echo Usage: qemu a.out (7 arguments allowed maximum)\n
+  else
+    shell kill -9 $(ps -f -u $(whoami) | grep -m 1 'qemu-aarch64 -g 1234' | awk '{print $2}') 2>/dev/null
+    file $arg0
+    if $argc == 1
+      shell qemu-aarch64 -g 1234 $arg0 &>/dev/stdout </dev/stdin &
+    else
+    if $argc == 2
+      shell qemu-aarch64 -g 1234 $arg0 $arg1 &>/dev/stdout </dev/stdin &
+    else
+    if $argc == 3
+      shell qemu-aarch64 -g 1234 $arg0 $arg1 $arg2 &>/dev/stdout </dev/stdin &
+    else
+    if $argc == 4
+      shell qemu-aarch64 -g 1234 $arg0 $arg1 $arg2 $arg3 &>/dev/stdout </dev/stdin &
+    else
+    if $argc == 5
+      shell qemu-aarch64 -g 1234 $arg0 $arg1 $arg2 $arg3 $arg4 &>/dev/stdout </dev/stdin &
+    else
+    if $argc == 6
+      shell qemu-aarch64 -g 1234 $arg0 $arg1 $arg2 $arg3 $arg4 $arg5 &>/dev/stdout </dev/stdin &
+    else
+    if $argc == 7
+      shell qemu-aarch64 -g 1234 $arg0 $arg1 $arg2 $arg3 $arg4 $arg5 $arg6 &>/dev/stdout </dev/stdin &
+    else
+      shell qemu-aarch64 -g 1234 $arg0 $arg1 $arg2 $arg3 $arg4 $arg5 $arg6 $arg7 &>/dev/stdout </dev/stdin &
+    end
+    end
+    end
+    end
+    end
+    end
+    end
+    target remote :1234
+    break main
+    continue
+  end
+end
+```
