@@ -9,3 +9,8 @@ github_username:  ughe
 permalink: /:year/:month/:day/:title
 show_excerpts: false
 plugins:
+
+# Markdown style
+kramdown:
+  input: GFM
+  auto_ids: true
