@@ -130,10 +130,8 @@ class StartCommand(gdb.Command):
             print("No symbol table loaded.  Use the \"file\" command.")
             return
         target = target.group(0)[:-12]
-        print("Target: " + target)
 
         aarch64 = re.search(r"file type elf64-.*aarch64.", infoTarget)
-        print("aarch64: " + str(bool(aarch64)))
 
         if (aarch64):
             try:
