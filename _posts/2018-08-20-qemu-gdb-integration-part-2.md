@@ -14,7 +14,7 @@ this post is to integrate this command into GDB's default `start` and
 just as easily as x86-64 ones by using the same commands. It also
 fixes the arbitrary limit on command line arguments.
 
-# First Attempt
+# [First Attempt](#first-attempt)
 
 My first attempt relied completely on using GDB's scripting language
 ([documentation available here](ftp://ftp.gnu.org/old-gnu/Manuals/gdb/html_node/gdb_187.html#SEC192)).
@@ -91,7 +91,7 @@ including waiting for the arguments to appear in `ps -u` and grabbing
 them from the system logs with a NOP instruction (`target exec true`).
 Ultimatley, I decided to try using python to solve the problem.
 
-# Solution
+# [Solution](#solution)
 
 Tom Tromey's posts (including [https://stackoverflow.com/a/17960363](https://stackoverflow.com/a/17960363))
 helped a lot in figuring out scripting GDB with Python. There is also
