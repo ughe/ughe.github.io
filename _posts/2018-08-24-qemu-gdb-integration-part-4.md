@@ -4,8 +4,6 @@ title: "Using Qemu within GDB Part 4"
 categories: [gdb, qemu, arm64]
 ---
 
-# [Summary](#summary)
-
 In the [previous post]({{ site.baseurl }}{% post_url 2018-08-23-qemu-gdb-integration-part-3 %}),
 all of the commands were condensed into a single `~/.gdbinit` file and
 `start` and `run` were overloaded to work with Qemu. However, there was
@@ -14,7 +12,7 @@ had them in the first place (as it was really `hook-run`). In order
 to fix this, the `hook-run` command needed to obtain the arguments
 without overriding the `run` command.
 
-# Possible Approaches
+# [Possible Approaches](#possible-approaches)
 
 While this could have been fixed with a patch to GDB sending command
 arguments also to their hooks in the methods `execute_cmd_pre_hook` in
@@ -30,10 +28,7 @@ there is actually a command called `show commands`, which lists the
 most recent commands, and this enables the `~/.gdbinit` to obtain the
 `start` command's arguments.
 
-# [The Code](#the-code)
-
-The below `~/.gdbinit` file contains everything needed to overload `run`
-and `start` to work with Qemu:
+# [Final .gdbinit](#final-gdbinit)
 
 ``` python
 ### --------------------------------------------------------------------
@@ -64,13 +59,6 @@ define hook-start
     shell touch .tmp.gdb.isStart
     run
   end
-end
-
-document hook-start
-Checks the binary's architecture. If it is aarch64, then it calls run,
-which aborts the start command. Additionally, it creates a temporary
-file called `.tmp.gdb.isStart`, which signals to run that it was
-called by start. Otherwise, start behaves normally (i.e. for x86-64).
 end
 
 define get-aarch64-args
@@ -112,12 +100,6 @@ define get-aarch64-args
   shell rm -f .tmp.gdb.log .tmp.gdb.src
 end
 
-document get-aarch64-args
-Captures the command line arguments of the most recent start command,
-if there are any and writes them to `.tmp.gdb.log`. Additionally, sets
-the $aarch64 convenience variable to 1 if the architecture is aarch64.
-end
-
 python
 ### --------------------------------------------------------------------
 ### start.py
@@ -128,7 +110,6 @@ python
 import os.path
 import re
 import subprocess
-import sys
 
 class RunCommand(gdb.Command):
     """
