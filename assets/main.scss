@@ -20,6 +20,16 @@ h1 a {
   }
 }
 
+/*
+ * No bullet points in lists
+ */
+.task-list {
+    margin-left: 0;
+}
+.task-list-item {
+    list-style-type: none;
+}
+
 /**
  * Style
  */
