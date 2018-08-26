@@ -28,7 +28,7 @@ there is actually a command called `show commands`, which lists the
 most recent commands, and this enables the `~/.gdbinit` to obtain the
 `start` command's arguments.
 
-# [Final .gdbinit](#final-gdbinit)
+# [.gdbinit](#gdbinit)
 
 ``` python
 ### --------------------------------------------------------------------
