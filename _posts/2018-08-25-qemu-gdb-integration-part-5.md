@@ -120,11 +120,13 @@ class QemuCommand(gdb.Command):
         ## Get Args
         if (not args):
             c = gdb.execute("show commands", False, True)
-            args = re.findall(r"((\n|^) *\d+  (start|run).*)", c)
+            args = re.findall(r"((\n|^) *\d+  (start |run |r ).*)", c)
             if (len(args)):
                 args = args[-1][0].strip("\n");
                 if (args[7:10] == "run"):
                     args = args[11:]
+                elif (args[7] == "r"):
+                    args = args[9:]
                 else: # == "start"
                     args = args[13:]
             if (not args or args == ""):
