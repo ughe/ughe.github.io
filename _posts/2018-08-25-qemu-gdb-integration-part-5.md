@@ -6,7 +6,8 @@ categories: [gdb, qemu, arm64]
 
 # [Changes](#changes)
 
-This is the fifth and final version of a series of posts working with
+This is the fifth ~~and final~~ *([Update: see Part 6!]({{ site.baseurl }}{% post_url 2018-08-27-qemu-gdb-integration-part-6 %}))*
+version of a series of posts working with
 GDB to integrate Qemu into the `start` and `run` commands. While GDB
 does support remote debug restarting with `set remote exec-file filename`,
 this does not work for Qemu. ([GDB remote documentation](https://sourceware.org/gdb/onlinedocs/gdb/Remote-Configuration.html)).
