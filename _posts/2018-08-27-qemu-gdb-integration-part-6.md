@@ -4,27 +4,25 @@ title: "Using Qemu within GDB Part 6"
 categories: [gdb, qemu, arm64]
 ---
 
-What if GDB Multiarch could debug emulated programs just as easily as
-natively? The extra overhead of setting up a GDB server or connecting
-to Qemu is significantly more than just typing `start` or `run`.
-
-The goal of this post is to run Qemu within GDB such that the commands
-`start` and `run` work just as easily as if the target being debugged
-was native. Additionally, GDB should still be able to debug native
-`x86-64` binaries unchanged.
-
 This post is the final in an unexpectedly long series (Parts
 [1]({{ site.baseurl }}{% post_url 2018-08-14-qemu-gdb-integration %})
 [2]({{ site.baseurl }}{% post_url 2018-08-20-qemu-gdb-integration-part-2 %})
 [3]({{ site.baseurl }}{% post_url 2018-08-23-qemu-gdb-integration-part-3 %})
 [4]({{ site.baseurl }}{% post_url 2018-08-24-qemu-gdb-integration-part-4 %})
 [5]({{ site.baseurl }}{% post_url 2018-08-25-qemu-gdb-integration-part-5 %}))
-of posts on making Qemu work within GDB.
+in making Qemu work within GDB for seamless cross-debugging.
 
-This has been accomplished all with just one `~/.gdbinit` file, and it
-supports Input/Output (`printf`, `scanf`, etc...); Emacs (`gud-gdb`
-side-by-side debugging); and all the other behaviors expected with an
-`x86-64` binary by just using the `start` and `run` commands.
+Debugging GDB native binaries is simple and quick. The goal of these
+posts has been to make debugging arm64 binaries on GDB just as easy.
+This is accomplished by having `gdb-multiarch` spin up Qemu automatically
+to perform user-space emulation for binaries cross-compiled with the
+`-static` flag. This allows the user to avoid having to type a series
+of commands, including `target remote :1234`.
+
+Qemu within GDB works with just one `~/.gdbinit` configuration file by
+overloading the `start` and `run` commands to actually call Qemu on
+the binary if the target is `aarch64`. Note that `x86-64` native
+binaries still work unchanged.
 
 # [Version 6](#version-6)
 
