@@ -10,6 +10,7 @@
 h1 a {
   color: $text-color;
   text-decoration: none;
+  @include relative-font-size(2.5);
 
   &:visited {
     color: $text-color;
