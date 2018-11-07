@@ -17,7 +17,7 @@ post demonstrates how to get it working using the
 
 # [Install](#install)
 
-### [GTKWave](#gtkwave)
+## [GTKWave](#gtkwave)
 
 First, install GTKWave:
 
@@ -30,7 +30,7 @@ Although you can try just running the executable now, it will run into
 an error if Perl's Switch module is not installed. This is done in the
 next section.
 
-### [Perl Switch](#perl-switch)
+## [Perl Switch](#perl-switch)
 
 Using Perl's package manager, install Switch:
 
@@ -53,7 +53,7 @@ Finally, the GTKWave command line tool can be run without any errors:
 /Applications/gtkwave.app/Contents/Resources/bin/gtkwave
 ```
 
-### [Add the command to ~/.bash_profile:](#add-the-command-to-bash_profile)
+## [Add the command to ~/.bash_profile:](#add-the-command-to-bash_profile)
 
 Now this can be added to the `~/.bash_profile` with:
 ``` bash
