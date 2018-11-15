@@ -11,7 +11,7 @@ This post is a follow up to the last one, [GTKWave on OSX]({{ site.baseurl }}{% 
 on OSX. The goal of this post is to show how to automate opening GTKWave
 files using TCL and a Makefile.
 
-# [gtkwave.tcl](#gtkwave-tcl)
+# [gtkwave.tcl](#gtkwavetcl)
 
 The TCL file accomplishes three things: adding all signals, zooming to
 fit, and printing out the signals to a PDF. There is a lot of documentation
