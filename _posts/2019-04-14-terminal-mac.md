@@ -20,7 +20,7 @@ with the same sensible defaults, including:
 # [Make Terminal look like iTerm2](#make-terminal-look-like-iterm2)
 
 1. Open Terminal > Preferences... > Profiles > Gear > Import
-2. [Download `iTerm.terminal`]({{ site.url }}/data/2019/04/14/terimanl-mac/iTerm.terminal)
+2. [Download `iTerm.terminal`]({{ site.url }}/data/2019/04/14/terminal-mac/iTerm.terminal)
 3. Select `iTerm.terminal`. Then select the `iTerm` profile from the
 list of profiles to make it active.
 
