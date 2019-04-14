@@ -1,12 +1,12 @@
 ---
 layout: post
-title: "GTKWave on OSX"
-categories: [gtkwave]
+title: "GTKWave on MacOS"
+categories: [gtkwave, macos]
 ---
 
 # [Motivation](#motivation)
 
-While installing and running GTKWave is straightforward on Mac OSX, it
+While installing and running GTKWave is straightforward on MacOS, it
 is slightly more difficult to get the command line tool running properly.
 
 One conventional approach is to use `alias gtkwave = open -a gtkwave`;
