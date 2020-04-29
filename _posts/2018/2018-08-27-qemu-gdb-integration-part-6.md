@@ -3,11 +3,11 @@ title: "Using Qemu within GDB Part 6"
 ---
 
 This post is the final in an unexpectedly long series (Parts
-[1]({{ site.baseurl }}{% post_url 2018-08-14-qemu-gdb-integration %})
-[2]({{ site.baseurl }}{% post_url 2018-08-20-qemu-gdb-integration-part-2 %})
-[3]({{ site.baseurl }}{% post_url 2018-08-23-qemu-gdb-integration-part-3 %})
-[4]({{ site.baseurl }}{% post_url 2018-08-24-qemu-gdb-integration-part-4 %})
-[5]({{ site.baseurl }}{% post_url 2018-08-25-qemu-gdb-integration-part-5 %}))
+[1](/2018/08/14/qemu-gdb-integration)
+[2](/2018/08/20/qemu-gdb-integration-part-2)
+[3](/2018/08/23/qemu-gdb-integration-part-3)
+[4](/2018/08/24/qemu-gdb-integration-part-4)
+[5](/2018/08/25/qemu-gdb-integration-part-5)
 in making Qemu work within GDB for seamless cross-debugging.
 
 Debugging GDB native binaries is simple and quick. The goal of these
@@ -28,7 +28,7 @@ The following 6th version fixes a regression that worked in the first
 attempt of Part 2, which was IO redirection (i.e. `scanf` and `printf`).
 It also makes the printing slightly neater and more identical to `x86-64`.
 
-See [the patch below]({{ site.baseurl }}{% post_url 2018-08-27-qemu-gdb-integration-part-6 %}#patch-from-version-5) for the diffed changes.
+See [the patch below](/2018/08/27/qemu-gdb-integration-part-6#patch-from-version-5) for the diffed changes.
 
 ``` python
 ### --------------------------------------------------------------------
@@ -157,12 +157,12 @@ end
 # Patch From Version 5
 
 The following patch shows the differences between this post and the
-last, [Version 5]({{ site.baseurl }}{% post_url 2018-08-25-qemu-gdb-integration-part-5 %}):
+last, [Version 5](/2018/08/25/qemu-gdb-integration-part-5):
 
 The changes are subtle but make a big difference:
 
 1) Fixed IO redirection. This was originally working in
-[Part 2]({{ site.baseurl }}{% post_url 2018-08-20-qemu-gdb-integration-part-2 %}#first-attempt).
+[Part 2](/2018/08/20/qemu-gdb-integration-part-2#first-attempt).
 By redirecting using the GDB command `shell` instead of `subprocess.call`,
 the input/output pipes are setup correctly.
 

@@ -2,7 +2,7 @@
 title: "Using Qemu within GDB Part 2"
 ---
 
-In [my previous post]({{ site.baseurl }}{% post_url 2018-08-14-qemu-gdb-integration %}),
+In [my previous post](/2018/08/14/qemu-gdb-integration),
 I demonstrated a new GDB `qemu` command to automate arm64 Qemu user
 space debugging. Although it works seamlessly, it can only handle 7
 arguments and is noticeable by the user because one needs to run the

@@ -2,7 +2,7 @@
 title: "Using Qemu within GDB Part 4"
 ---
 
-In the [previous post]({{ site.baseurl }}{% post_url 2018-08-23-qemu-gdb-integration-part-3 %}),
+In the [previous post](/2018/08/23/qemu-gdb-integration-part-3),
 all of the commands were condensed into a single `~/.gdbinit` file and
 `start` and `run` were overloaded to work with Qemu. However, there was
 a subtle-bug: the `run` command did not pass arguments because it never

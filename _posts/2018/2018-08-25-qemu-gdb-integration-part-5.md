@@ -4,13 +4,13 @@ title: "Using Qemu within GDB Part 5"
 
 # Changes
 
-This is the fifth ~~and final~~ *([Update: see Part 6!]({{ site.baseurl }}{% post_url 2018-08-27-qemu-gdb-integration-part-6 %}))*
+This is the fifth ~~and final~~ *([Update: see Part 6!](/2018/08/27/qemu-gdb-integration-part-6))*
 version of a series of posts working with
 GDB to integrate Qemu into the `start` and `run` commands. While GDB
 does support remote debug restarting with `set remote exec-file filename`,
 this does not work for Qemu. ([GDB remote documentation](https://sourceware.org/gdb/onlinedocs/gdb/Remote-Configuration.html)).
 
-[Part 4]({{ site.baseurl }}{% post_url 2018-08-24-qemu-gdb-integration-part-4 %})
+[Part 4](/2018/08/24/qemu-gdb-integration-part-4)
 presented a fully functioning set of `start` and `run` commands. To
 improve upon it, this post removes all use of temporary files, adds
 helpful error messages, improves the clarity of the `~/.gdbinit` file

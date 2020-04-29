@@ -5,7 +5,7 @@ title: "GTKWave Automation"
 What if GTKWave could show all signals, zoom to fit, and save the graph
 as a PDF every time it was openend? Using a TCL file, this is possible.
 
-This post is a follow up to the last one, [GTKWave on OSX]({{ site.baseurl }}{% post_url 2018-11-06-gtkwave-osx %}), which covered installing the command line tool
+This post is a follow up to the last one, [GTKWave on OSX](/2018/11/06/gtkwave-osx), which covered installing the command line tool
 on OSX. The goal of this post is to show how to automate opening GTKWave
 files using TCL and a Makefile.
 

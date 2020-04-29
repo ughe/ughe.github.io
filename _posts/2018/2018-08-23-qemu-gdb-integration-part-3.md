@@ -7,7 +7,7 @@ title: "Using Qemu within GDB Part 3"
 This third post is the ~~final~~ follow-up on the series of posts
 investigating how to overload GDB's `start` and `run` commands to
 automatically debug aarch64 binaries using Qemu's user-space emulation
-mode. In [Part 2]({{ site.baseurl }}{% post_url 2018-08-20-qemu-gdb-integration-part-2 %}), I overloaded the `start` command and just redirected the `run`
+mode. In [Part 2](/2018/08/20/qemu-gdb-integration-part-2), I overloaded the `start` command and just redirected the `run`
 command to basically perform a `start`, leaving the user to finish it
 with the `continue` command.
 
