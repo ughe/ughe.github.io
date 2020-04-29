@@ -1,10 +1,8 @@
 ---
-layout: post
 title: "Using Qemu within GDB Part 3"
-categories: [gdb, qemu, arm64]
 ---
 
-# [Summary](#summary)
+# Summary
 
 This third post is the ~~final~~ follow-up on the series of posts
 investigating how to overload GDB's `start` and `run` commands to
@@ -13,7 +11,7 @@ mode. In [Part 2]({{ site.baseurl }}{% post_url 2018-08-20-qemu-gdb-integration-
 command to basically perform a `start`, leaving the user to finish it
 with the `continue` command.
 
-# [Run](#run)
+# Run
 
 The final stretch in completing the commands was to also make `run`
 work. While at it, it this post combines the previous `start.py` and
@@ -40,7 +38,7 @@ directory. If this file exists, then the user first called `run`, which
 determined the binary type was aarch64. Otherwise, the user just called
 `start` directly.
 
-# [The Code](#the-code)
+# The Code
 
 The below `~/.gdbinit` file contains everything needed to overload `run`
 and `start` to work with Qemu:
@@ -161,7 +159,7 @@ end
 
 ```
 
-# [Sample Execution](#sample-execution)
+# Sample Execution
 
 The following execution examples were started with a `hello.s` program
 in `a.out` (compiled with `aarch64-linux-gnu-gcc -static -g hello.s`)

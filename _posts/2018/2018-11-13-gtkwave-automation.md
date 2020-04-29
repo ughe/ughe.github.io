@@ -1,7 +1,5 @@
 ---
-layout: post
 title: "GTKWave Automation"
-categories: [gtkwave]
 ---
 
 What if GTKWave could show all signals, zoom to fit, and save the graph
@@ -11,7 +9,7 @@ This post is a follow up to the last one, [GTKWave on OSX]({{ site.baseurl }}{% 
 on OSX. The goal of this post is to show how to automate opening GTKWave
 files using TCL and a Makefile.
 
-# [gtkwave.tcl](#gtkwavetcl)
+# gtkwave.tcl
 
 The TCL file accomplishes three things: adding all signals, zooming to
 fit, and printing out the signals to a PDF. There is a lot of documentation
@@ -47,7 +45,7 @@ set dumpname [ gtkwave::getDumpFileName ]
 gtkwave::/File/Print_To_File PDF {Letter (8.5" x 11")} Minimal $dumpname.pdf
 ```
 
-# [Makefile](#makefile)
+# Makefile
 
 The following Makefile is geared toward [ELE 206](https://registrar.princeton.edu/course-offerings/course_details.xml?courseid=002463&term=1192)
 lab projects. Setting `TARGET` to the name of the pair of `.v` and

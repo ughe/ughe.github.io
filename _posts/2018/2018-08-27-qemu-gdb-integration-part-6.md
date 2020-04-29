@@ -1,7 +1,5 @@
 ---
-layout: post
 title: "Using Qemu within GDB Part 6"
-categories: [gdb, qemu, arm64]
 ---
 
 This post is the final in an unexpectedly long series (Parts
@@ -24,7 +22,7 @@ overloading the `start` and `run` commands to actually call Qemu on
 the binary if the target is `aarch64`. Note that `x86-64` native
 binaries still work unchanged.
 
-# [Version 6](#version-6)
+# Version 6
 
 The following 6th version fixes a regression that worked in the first
 attempt of Part 2, which was IO redirection (i.e. `scanf` and `printf`).
@@ -156,7 +154,7 @@ end
 
 ```
 
-# [Patch From Version 5](#patch-from-version-5)
+# Patch From Version 5
 
 The following patch shows the differences between this post and the
 last, [Version 5]({{ site.baseurl }}{% post_url 2018-08-25-qemu-gdb-integration-part-5 %}):
@@ -212,7 +210,7 @@ opposite of the newline character `\n`, which is the [ansi escape code](https://
  QemuCommand()
 ```
 
-# [References](#references)
+# References
 
 This is the full list of helpful references that contributed to the
 various iterations from parts 1-6. It turned out GDB's documentation

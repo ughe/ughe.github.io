@@ -1,14 +1,12 @@
 ---
-layout: post
 title: "Building GDB from Source"
-categories: [gdb, vagrant]
 ---
 
 This post covers compiling the GDB source code on an x86 or amd64
 machine, in order to set up a local development environment. Note that
 it may take over an hour.
 
-# [Download Linux Hypervisor](#download-linux-hypervisor)
+# Download Linux Hypervisor
 
 * Install [virtualbox](https://www.virtualbox.org/wiki/Downloads) and
 [vagrant](https://www.vagrantup.com/downloads.html).
@@ -20,7 +18,7 @@ vagrant init debian/stretch64
 vagrant up
 ```
 
-# [Install Dependencies](#install-dependencies)
+# Install Dependencies
 
 ``` bash
 vagrant ssh
@@ -32,7 +30,7 @@ git clone git://sourceware.org/git/binutils-gdb.git gdb
 
 [Dependencies Reference](https://sourceware.org/gdb/wiki/BuildBot#Debian-specific_instructions)
 
-# [Compile and Test](#compile-and-test)
+# Compile and Test
 
 ``` bash
 cd gdb

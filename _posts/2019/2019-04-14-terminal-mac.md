@@ -1,7 +1,5 @@
 ---
-layout: post
 title: "Terminal on MacOS"
-categories: [macos]
 ---
 
 One of the best terminals for MacOS is [iTerm2](https://www.iterm2.com/).
@@ -17,7 +15,7 @@ with the same sensible defaults, including:
 - Use option key as `Meta` inside the terminal
 - Same title bar with the process name and shortcut key
 
-# [Make Terminal look like iTerm2](#make-terminal-look-like-iterm2)
+# Make Terminal look like iTerm2
 
 1. Open Terminal > Preferences... > Profiles > Gear > Import
 2. [Download `iTerm.terminal`]({{ site.url }}/data/2019/04/14/terminal-mac/iTerm.terminal)

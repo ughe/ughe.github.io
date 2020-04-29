@@ -1,7 +1,5 @@
 ---
-layout: post
 title: "Using Qemu within GDB"
-categories: [gdb, qemu, arm64]
 ---
 
 Debugging arm64 programs is slightly easier natively on an [arm64
@@ -21,7 +19,7 @@ To integrate Qemu into GDB, a command can be created to make running
 a remote server just as easy as the native `start` command. Let's call
 it `qemu` (it will be invoked inside of GDB).
 
-# [Define the `qemu` command in GDB:](#define-the-qemu-command-in-gdb)
+# Define the `qemu` command in GDB:
 
 Create a `~/.gdbinit` file with the following contents (or just type
 this into GDB):
@@ -57,7 +55,7 @@ restriction is this does not work with the GDB tui (i.e.
 Finally, GDB is told to connect to Qemu with `target remote :1234`,
 and it goes straight to `main`.
 
-# [Taking Command Line Parameters](#taking-command-line-parameters)
+# Taking Command Line Parameters
 
 The `qemu` command can be extended to accept command line arguments
 along with passing the input and output. While theoretically it could

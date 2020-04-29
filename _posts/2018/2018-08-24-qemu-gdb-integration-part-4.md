@@ -1,7 +1,5 @@
 ---
-layout: post
 title: "Using Qemu within GDB Part 4"
-categories: [gdb, qemu, arm64]
 ---
 
 In the [previous post]({{ site.baseurl }}{% post_url 2018-08-23-qemu-gdb-integration-part-3 %}),
@@ -12,7 +10,7 @@ had them in the first place (as it was really `hook-run`). In order
 to fix this, the `hook-run` command needed to obtain the arguments
 without overriding the `run` command.
 
-# [Possible Approaches](#possible-approaches)
+# Possible Approaches
 
 While this could have been fixed with a patch to GDB sending command
 arguments also to their hooks in the methods `execute_cmd_pre_hook` in
@@ -28,7 +26,7 @@ there is actually a command called `show commands`, which lists the
 most recent commands, and this enables the `~/.gdbinit` to obtain the
 `start` command's arguments.
 
-# [.gdbinit](#gdbinit)
+# .gdbinit
 
 ``` python
 ### --------------------------------------------------------------------
@@ -171,7 +169,7 @@ end
 
 ```
 
-# [Sample Execution](#sample-execution)
+# Sample Execution
 
 The following execution examples were started with a `hello.s` program
 in `a.out` (compiled with `aarch64-linux-gnu-gcc -static -g hello.s`)

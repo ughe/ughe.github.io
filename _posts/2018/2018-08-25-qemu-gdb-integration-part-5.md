@@ -1,10 +1,8 @@
 ---
-layout: post
 title: "Using Qemu within GDB Part 5"
-categories: [gdb, qemu, arm64]
 ---
 
-# [Changes](#changes)
+# Changes
 
 This is the fifth ~~and final~~ *([Update: see Part 6!]({{ site.baseurl }}{% post_url 2018-08-27-qemu-gdb-integration-part-6 %}))*
 version of a series of posts working with
@@ -20,7 +18,7 @@ helpful error messages, improves the clarity of the `~/.gdbinit` file
 of redefining one of the latter two), and finally by improving Emacs
 integration to open the source window immediatley on `start`.
 
-# [Version 5](#version-5)
+# Version 5
 
 - [x] Restarting
 - [x] Emacs
@@ -153,7 +151,7 @@ end
 
 ```
 
-# [Emacs Note](#emacs-note)
+# Emacs Note
 
 The following part, if placed in a `~/.emacs` file will automatically
 switch `gud-gdb` to use `gdb-multiarch` instead of `gdb`. Using the

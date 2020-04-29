@@ -1,10 +1,8 @@
 ---
-layout: post
 title: "GTKWave on MacOS"
-categories: [gtkwave, macos]
 ---
 
-# [Motivation](#motivation)
+# Motivation
 
 While installing and running GTKWave is straightforward on MacOS, it
 is slightly more difficult to get the command line tool running properly.
@@ -15,9 +13,9 @@ arguments. Even using `--args` to pass arguments does not work. This
 post demonstrates how to get it working using the
 `/Applications/gtkwave.app/Contents/Resources/bin/gtkwave` executable.
 
-# [Install](#install)
+# Install
 
-## [GTKWave](#gtkwave)
+## GTKWave
 
 First, install GTKWave:
 
@@ -30,7 +28,7 @@ Although you can try just running the executable now, it will run into
 an error if Perl's Switch module is not installed. This is done in the
 next section.
 
-## [Perl Switch](#perl-switch)
+## Perl Switch
 
 Using Perl's package manager, install Switch:
 
@@ -45,7 +43,7 @@ The last command prints out the location of where Switch is installed. If it is 
 sudo cp /usr/local/Cellar/perl/5.*/lib/perl5/site_perl/5.*/Switch.pm /Library/Perl/5.*/
 ```
 
-# [Run](#run)
+# Run
 
 Finally, the GTKWave command line tool can be run without any errors:
 
@@ -53,7 +51,7 @@ Finally, the GTKWave command line tool can be run without any errors:
 /Applications/gtkwave.app/Contents/Resources/bin/gtkwave
 ```
 
-## [Add the command to ~/.bash_profile:](#add-the-command-to-bash_profile)
+## Add the command to ~/.bash_profile:
 
 Now this can be added to the `~/.bash_profile` with:
 ``` bash
@@ -64,7 +62,7 @@ or with:
 export PATH= /Applications/gtkwave.app/Contents/Resources/bin/:$PATH
 ```
 
-# [Helpful References](#helpful-resources)
+# Helpful References
 1. [A hacking attempt](https://superuser.com/q/1351190)
 2. [A conventional approach for reference only](http://web02.gonzaga.edu/faculty/talarico/CP230/labs/LabT0/IverilogMac.pdf)
 3. [The Manual](http://gtkwave.sourceforge.net/gtkwave.pdf#Apple-Macintosh-Operating-Systems)
