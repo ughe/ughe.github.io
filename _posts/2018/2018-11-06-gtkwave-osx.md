@@ -1,10 +1,10 @@
 ---
-title: "GTKWave on MacOS"
+title: "GTKWave on macOS"
 ---
 
 # Motivation
 
-While installing and running GTKWave is straightforward on MacOS, it
+While installing and running GTKWave is straightforward on macOS, it
 is slightly more difficult to get the command line tool running properly.
 
 One conventional approach is to use `alias gtkwave = open -a gtkwave`;

@@ -1,8 +1,8 @@
 ---
-title: "Setting up Terminal on MacOS"
+title: "Setting up Terminal on macOS"
 ---
 
-Setting up convenient Terminal defaults on MacOS can be done manually or
+Setting up convenient Terminal defaults on macOS can be done manually or
 automatically. This post improves upon the [previous post](/2019/04/14/terminal-mac)
 by providing a simple `bash` or `zsh` script for setting up useful defaults,
 which are to:

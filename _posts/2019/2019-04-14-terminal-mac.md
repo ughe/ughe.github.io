@@ -1,13 +1,13 @@
 ---
-title: "Terminal on MacOS"
+title: "Terminal on macOS"
 ---
 
-One of the best terminals for MacOS is [iTerm2](https://www.iterm2.com/).
+One of the best terminals for macOS is [iTerm2](https://www.iterm2.com/).
 It has many extra features including better copy/paste support and even
 an option for different text color under the cursor. Small things like
 this make a big difference.
 
-What if Terminal on MacOS could look and behave more like iTerm2? This
+What if Terminal on macOS could look and behave more like iTerm2? This
 post creates a Terminal profile that mimics the appearance and behavior
 of iTerm2, so that the default Terminal can be used in a similar way and
 with the same sensible defaults, including:
