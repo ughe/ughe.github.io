@@ -58,12 +58,13 @@ these steps in order to quickly check for auto-launching code (as well
 as kernel extensions):
 
 ```bash
-alias help="\
-kextstat | awk '!/ com.apple./{print $6}' ; \
-echo 'usage: launchctl disable gui/\`id -u\`/com.example.launch-service' ; \
+alias help="kextstat | awk '"'!'"/ com.apple./{print \$6}' ; \
 launchctl list | grep -v '\tcom.apple.' ; \
+echo 'usage: launchctl disable gui/\`id -u\`/com.example.launch-service' ; \
 ls -a /Library/Launch* ~/Library/Launch* "
 ```
+
+> Note: Updated on Feb 28, 2021 to properly escape the `!` in the bash alias.
 
 [1]: https://apple.stackexchange.com/questions/325181/how-to-prevent-app-from-auto-starting
 [2]: https://developer.apple.com/library/archive/documentation/MacOSX/Conceptual/BPSystemStartup/Chapters/CreatingLoginItems.html
