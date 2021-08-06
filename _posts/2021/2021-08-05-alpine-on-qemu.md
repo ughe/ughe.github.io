@@ -204,5 +204,5 @@ In this post, we aimed to run Alpine Linux on macOS using Qemu, with minimal use
 [1]: https://stackoverflow.com/a/64993771
 [2]: https://www.reddit.com/r/VFIO/comments/kdhgni/qemu_hvf_support_for_mac_os_x_bug_sur_hv_error
 [3]: https://stackoverflow.com/a/63746318
-[4]: https://stackoverflow.com/q/16026858
+[4]: https://bluesock.org/~willg/dev/ansi.html
 [5]: https://docs.oracle.com/en/virtualization/virtualbox/6.0/admin/vrde.html
