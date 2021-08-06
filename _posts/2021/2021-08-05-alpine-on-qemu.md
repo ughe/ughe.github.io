@@ -71,9 +71,9 @@ setup-sshd -c none
 
 echo -e 'https://alpine.global.ssl.fastly.net/alpine/v3.14/main\nhttps://alpine.global.ssl.fastly.net/alpine/v3.14/community\n' > /etc/apk/repositories
 
-setup-ntp -c chrony
-
 apk add adwaita-icon-theme chrony clang elogind emacs firefox g++ git htop ip6tables iptables lightdm-gtk-greeter make polkit-elogind setxkbmap sudo tmux vim xdg-utils xfce4 xfce4-terminal xorg-server
+
+setup-ntp -c chrony
 
 setup-xorg-base
 X -configure
