@@ -15,6 +15,6 @@ kramdown:
   input: GFM
   auto_ids: true
 
-# Include .gdbinit and .emacs
-include: ["data/2018/cos217/.gdbinit", "data/2018/cos217/.emacs"]
+# Include a dotfile
+#include: ["data/2022/.dotfile"]
 
