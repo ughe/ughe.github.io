@@ -1,0 +1,62 @@
+@charset "utf-8";
+
+// Constants
+$max-width: 960px;
+$background-color: #F6F8FA;
+
+$navbar-color: #24292E;
+$navbar-font-color: hsla(0,0%,100%,1.0);
+$navbar-font: 600 18px/1 Arial;
+$navbar-height: 53px;
+$navbar-margin: 15px;
+$navbar-item-spacing: 10px;
+$navbar-img-size: 20px;
+$navbar-img-radius: 3px;
+
+$home-post-size: 300px;
+$home-post-margin: 10px;
+$home-post-padding: 20px;
+$home-post-radius: 15px;
+$home-post-color: white;
+$home-post-font: bold 42px "Times New Roman";
+$home-post-date-color: #828282;
+$home-post-date-font: 16px Arial;
+
+$post-padding: 69px;
+$post-title-font: 42px Arial;
+$post-date-font: 16px Arial;
+
+// Reset
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: $background-color;
+}
+
+.wrapper {
+  max-width: $max-width;
+  margin: 0 auto;
+}
+
+.no-bullet {
+  list-style: none;
+}
+
+#footer {
+  margin-top: 100px;
+}
+
+// Link to styles
+@import
+  "footer",
+  "home",
+  "navbar",
+  "octostyle",
+  "post",
+  "stripe",
+  "syntax"
+;

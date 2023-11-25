@@ -1,0 +1,21 @@
+#home #post-card ul {
+  list-style-type: none;
+  padding: 0;
+}
+#home #post-card ul li a {
+  text-decoration: none;
+}
+
+.pad {
+  padding: 12px;
+  background-color: $background-color;
+  border-radius: 7px;
+}
+.pad-title {
+//  color: #0366D6;
+  font: 24px Arial;
+}
+.pad-date {
+  color: $home-post-date-color;
+  font: $home-post-date-font;
+}

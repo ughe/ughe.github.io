@@ -1,0 +1,26 @@
+#post-header {
+  width: 100%;
+  margin-bottom: $post-padding / 2;
+}
+
+#post-title {
+  font: $post-title-font;
+  letter-spacing: -1px;
+  margin-bottom: $home-post-margin;
+}
+
+#post-date {
+  color: $home-post-date-color;
+  font: $post-date-font;
+  margin: 0 auto;
+}
+
+#post-card {
+  margin: $home-post-margin;
+  padding: $post-padding;
+  box-shadow: rgba(23, 28, 33, 0.06) 0px 4px 9px 0px;
+  background-color: white;
+  border-radius: 5px;
+  word-wrap: break-word;
+  overflow: hidden;
+}

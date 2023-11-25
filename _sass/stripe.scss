@@ -1,0 +1,64 @@
+$yellow-orange: #FCC555;
+$light-orange: #FCB045;
+$medium-orange: #FFA500;
+$dark-orange: #FF9500;
+$x-dark-orange: #FF8500;
+$stripe-height: 100px;
+$stripes-height: 650px;
+
+$stripe1-width: 20%;
+$stripe2-width: 30%;
+$stripe3-width: 50%;
+$stripe4-width: 35%;
+$stripe5-width: 30%;
+
+#stripes {
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: $stripes-height;
+  position: absolute;
+  overflow: hidden;
+  transform: skewY(-7deg);
+  transform-origin: 0;
+  background: linear-gradient(90deg, $dark-orange, $light-orange);
+  z-index: -1;
+}
+
+#stripe1 {
+  position: absolute;
+  width: $stripe1-width;
+  height: $stripe-height + $navbar-height;
+  left: 0;
+  background: linear-gradient(90deg, $dark-orange,  $x-dark-orange);
+}
+#stripe2 {
+  position: absolute;
+  width: $stripe2-width;
+  height: $stripe-height + $navbar-height;
+  left: $stripe1-width;
+  background: $medium-orange;
+}
+#stripe3 {
+  position: absolute;
+  width: $stripe3-width;
+  height: $stripe-height + $navbar-height;
+  left: $stripe1-width + $stripe2-width;
+  background: $dark-orange;
+}
+#stripe4 {
+  position: absolute;
+  width: $stripe4-width;
+  height: $stripe-height + $navbar-height;
+  left: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, $x-dark-orange, $dark-orange);
+}
+#stripe5 {
+  position: absolute;
+  width: $stripe5-width;
+  height: $stripe-height + $navbar-height;
+  right: 0;
+  bottom: 15px;
+  background: linear-gradient(90deg, #fcb04500, $x-dark-orange);
+}

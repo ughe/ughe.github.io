@@ -1,20 +1,35 @@
-# Theme
-theme: minima
-
-# Metadata
 title: ughe.github.io
 author: William Ughetta
-github_username:  ughe
 
-permalink: /:year/:month/:day/:title
-show_excerpts: false
-plugins:
-
-# Markdown style
+markdown: kramdown
 kramdown:
+  syntax_highlighter: rouge
   input: GFM
   auto_ids: true
 
-# Include a dotfile
-#include: ["data/2022/.dotfile"]
+plugins:
+  - jekyll-coffeescript
+  - jekyll-commonmark-ghpages
+  - jekyll-gist
+  - jekyll-github-metadata
+  - jekyll-paginate
+  - jekyll-relative-links
+  - jekyll-optional-front-matter
+  - jekyll-readme-index
+  - jekyll-default-layout
+  - jekyll-titles-from-headings
 
+permalink: /:year/:month/:day/:title
+date_format: "%B %-d, %Y"
+
+# The url may be relative (internal) or absolute (external)
+navbar:
+  left:
+  - name: ughe.github.io
+    url: "/"
+  right:
+  - name: Code
+    url: https://github.com/ughe
+#  img:
+#    src: https://avatars1.githubusercontent.com/u/6691748
+#    url: https://github.com/ughe

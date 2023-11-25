@@ -1,0 +1,24 @@
+---
+layout: default
+---
+<div id="post">
+  <div id="stripes" aria-hidden=true>
+    <span id="stripe1"></span>
+    <span id="stripe2"></span>
+    <span id="stripe3"></span>
+    <span id="stripe4"></span>
+    <span id="stripe5"></span>
+  </div>
+  <div id="post-card" class="markdown-body entry-content">
+  <div id="post-header">
+    <div id="post-title">
+      {{- page.title | escape -}}
+    </div>
+    <div id="post-date">
+      {%- assign date_format = site.date_format | default:"%b %-d, %Y" -%}
+      {{- page.date | date: date_format -}}
+    </div>
+  </div>
+    {{ content | octolink }}
+  </div>
+</div>

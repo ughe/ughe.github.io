@@ -1,0 +1,50 @@
+#navbar {
+  background-color: $navbar-color;
+  height: $navbar-height;
+  margin-bottom: $navbar-margin;
+  display: flex;
+  align-items: center;
+}
+
+#navbar .wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar-left {
+  width: 100%;
+  margin-left: $home-post-margin + $post-padding;
+  display: flex;
+}
+
+.navbar-right {
+  width: 100%;
+  margin-right: $home-post-margin + $post-padding;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.navbar-left a {
+  margin-right: $navbar-item-spacing;
+}
+
+.navbar-right a {
+  margin-left: $navbar-item-spacing;
+}
+
+#navbar a {
+  height: 100%;
+  text-decoration: none;
+  color: $navbar-font-color;
+  font: $navbar-font;
+  display: flex;
+  align-items: center;
+}
+
+#navbar img {
+  width: $navbar-img-size;
+  height: $navbar-img-size;
+  border-radius: $navbar-img-radius;
+}

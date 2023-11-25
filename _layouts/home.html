@@ -1,0 +1,32 @@
+---
+layout: default
+---
+<div id="home">
+  <div id="stripes" aria-hidden=true>
+    <span id="stripe1"></span>
+    <span id="stripe2"></span>
+    <span id="stripe3"></span>
+    <span id="stripe4"></span>
+    <span id="stripe5"></span>
+  </div>
+  <div id="post-card" class="markdown-body entry-content">
+    <h1>Posts</h1>
+    <ul>
+      {%- if site.posts.size > 0 -%}
+        {%- assign date_format = site.date_format | default:"%b %-d, %Y" -%}
+        {%- for post in site.posts -%}
+        <li class="pad">
+          <a href="{{ post.url | relative_url }}">
+            <div class="pad-date">
+              {{- post.date | date: date_format -}}
+            </div>
+            <div class="pad-title">
+              {{- post.title | escape -}}
+            </div>
+          </a> <!-- pad -->
+        </li>
+        {%- endfor -%}
+      {%- endif -%}
+    </ul>
+  </div>
+</div> <!-- page -->
