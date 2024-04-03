@@ -1,5 +1,6 @@
 ---
 title: "SCSI, OSI, and Artificial Intelligence"
+modified: 2024-04-03
 ---
 
 ## A Question
@@ -53,11 +54,13 @@ make connections about new information (SCSI and the OSI Model) without any
 previous knowledge about the relationship between those two distinct concepts.
 
 The punchline, after the listener gets the answer correct, is that all the AI
-models (that I have seen so far) get the answer wrong. This serves as a starting point
+models (that I have seen so far) get the answer wrong.[^9] This serves as a starting point
 to discuss the capabilities of AI. What it can do in practice, what it can do
 in theory, and why we shouldn't be surprised that it can make simple logic
 errors that appear obvious to humans who have access to the same necessary
 information.
+
+[^9]: **Update on 4/3/2024:** after this blog post went to press, I have received a report of ChatGPT getting this question correct as well as incorrect. This suggests there could be a large variance to the answers.
 
 ## The Answer
 
@@ -85,7 +88,7 @@ the future. The hash is:
 
 Knowing what SCSI and the OSI Model are is not enough for AI to pinpoint where
 on the model that SCSI belongs. 
-This suggests that on even simple questions,
+This suggests[^9] that on even simple questions,
 artificial intelligence can draw incorrect and erroneous conclusions. On the
 very same questions, humans are able to create logical connections in the
 absence of prior information and to operate in the midst of uncertainty.

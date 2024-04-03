@@ -14,10 +14,16 @@ layout: default
     <div id="post-title">
       {{- page.title | escape -}}
     </div>
-    <div id="post-date">
-      {%- assign date_format = site.date_format | default:"%b %-d, %Y" -%}
+    {%- assign date_format = site.date_format | default:"%b %-d, %Y" -%}
+    <div class="post-date">
       {{- page.date | date: date_format -}}
     </div>
+    {%- if page.modified -%}
+      <br>
+      <div class="post-date">
+      Last Updated:&nbsp; {{- page.modified | date: date_format -}}
+      </div>
+    {%- endif -%}
   </div>
     {{ content | octolink }}
   </div>
